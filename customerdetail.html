@@ -4,7 +4,7 @@
     <div class="form-group row">
       <label for="name" class="col-sm-2 form-control-label">NAME</label>
       <div class="col-sm-4">
-        <input type="text" class="form-control" id="inputEmail3" ng-model="customer.name" placeholder="Name">
+        <input type="text" class="form-control" id="inputEmail3" ng-model="newcustomer.name" placeholder="Name">
       </div>
     </div>
     <div class="form-group row">
@@ -12,10 +12,10 @@
       <div class="col-sm-2">
         <div class="radio">
           <label class="active">
-            <input type="radio" name="gridRadios" id="gridRadios1" ng-model="customer.sex" value="MALE" checked="checked">Male
+            <input type="radio" name="gridRadios" id="gridRadios1" ng-model="newcustomer.sex" value="MALE" checked="checked">Male
           </label>
           <label>
-            <input type="radio" name="gridRadios" id="gridRadios2" ng-model="customer.sex" value="FEMALE">Female
+            <input type="radio" name="gridRadios" id="gridRadios2" ng-model="newcustomer.sex" value="FEMALE">Female
           </label>
       </div>
     </div>
@@ -23,24 +23,33 @@
     <div class="form-group row">
       <label for="email" class="col-sm-2 form-control-label">E-MAIL</label>
       <div class="col-sm-4">
-        <input type="email" class="form-control" id="inputEmail3" ng-model="customer.email" placeholder="email"><br>
+        <input type="email" class="form-control" id="inputEmail3" ng-model="newcustomer.email" placeholder="email"><br>
       </div>
     </div>
-        <input type= "button" class="btn btn-primary btn-md  " ng-click="add()" value=ADD><br><br>
+        <input type= "button" class="btn btn-primary btn-md  " ng-click="addcustomer" value=ADD><br><br>
     </form>
     <h3>Customer Lists</h3>
   	<div class="table-responsive">
       <table class="table table-bordered table-hover">
   			<thead>
           <tr>
+              <th>ID</th>
               <th>Name</th>
               <th>Sex</th>
               <th>Email</th>
-  					</tr>
+  			</tr>
   			</thead>
           <tr ng-repeat="customer in customers" align="center">
-              <td>{{customer.name}}</td>
-              <td>{{customer.sex}}</td>
-              <td>{{customer.email}}</td>
+
+        <td>{{ customer.id }}</td>
+        <td>
+            <a ng-click="removeCustomer({{ customer.id }})">[-]</a>
+            <a href="#/customer/{{ customer.id }}">
+                {{ customer.name }}
+            </a>
+        </td>
+        <td> {{customer.sex}}
+        <td>{{ customer.email }}</td>
+
           </tr>
       </table>
