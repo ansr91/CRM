@@ -1,14 +1,7 @@
 <div class="container" ng-controller="customerctrl">
   <h3>Customer form</h3>
   <form class="form-horizontal" role="form">
-    <div class="form-group row">
-      <label for="id" class="col-sm-2 form-control-label">S.NO</label>
-      <div class="col-sm-4">
-        <input type="text" class="form-control" id="inputEmail3" ng-model="newcustomer.id" placeholder="s.no">
-      </div>
-    </div>
-
-    <div class="form-group row">
+      <div class="form-group row">
       <label for="name" class="col-sm-2 form-control-label">NAME</label>
       <div class="col-sm-4">
         <input type="text" class="form-control" id="inputEmail3" ng-model="newcustomer.name" placeholder="Name">
@@ -33,30 +26,7 @@
         <input type="email" class="form-control" id="inputEmail3" ng-model="newcustomer.email" placeholder="email"><br>
       </div>
     </div>
-        <input type= "button" class="btn btn-primary btn-md  " ng-click="addcustomer()" value=ADD><br><br>
+        <input type= "button" class="btn btn-primary btn-md  " ng-click="addcustomer()" value=ADD>
+        <a href = "#/list" class = "btn btn-primary btn-md ">Customers List</a>
     </form>
-    <h3>Customer Lists</h3>
-  	<div class="table-responsive">
-      <table class="table table-bordered table-hover">
-  			<thead>
-          <tr>
-              <th>ID</th>
-              <th>Name</th>
-              <th>Sex</th>
-              <th>Email</th>
-              <th>Action</th>
-  			</tr>
-  			</thead>
-          <tr ng-repeat="newcustomer in customers" align="center">
-
-        <td>{{ newcustomer.id }}</td>
-        <td>{{newcustomer.name}}        </td>
-        <td> {{newcustomer.sex}}</td>
-        <td>{{newcustomer.email }}</td>
-        <td> <a ng-click = "edit()">EDIT|</a>
-             <a ng-click = "delte()">DELETE</a>
-          </tr>
-      </table>
-
-    </div>
-  </div>
+      </div>

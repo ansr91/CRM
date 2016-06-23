@@ -1,0 +1,19 @@
+<div class="container" ng-controller= "customerctrl">
+  <h3>Customer Info:</h3>
+  <form class="form-horizontal" role="form">
+      <div class="form-group row">
+      <label for="name" class="col-sm-2 form-control-label">NAME:</label>
+      <div class="col-sm-4">
+        {{newcustomer.name}}
+      </div>
+    </div>
+    <form class="form-horizontal" role="form">
+        <div class="form-group row">
+        <label for="name" class="col-sm-2 form-control-label">EMAIL:</label>
+        <div class="col-sm-4">
+          {{newcustomer.email}}
+        </div>
+      </div>
+      <a href = "#/add/" class = "btn btn-primary btn-md">Add Customer</a>
+        <a href = "#/list" class = "btn btn-primary btn-md ">Customers List</a>
+</div>

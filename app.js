@@ -2,15 +2,28 @@ var myApp = angular.module("myApp", ['ngRoute']);
 
 myApp.config(function($routeProvider) {
     $routeProvider.
-    when('/', {
-        templateUrl: 'customerdetail.html',
+    when('/list', {
+        templateUrl: 'list/customerlist.html',
+        controller: 'listctrl'
+    }).
+    when('/add',{
+        templateUrl:'customerdetail/customerdetail.html',
         controller: 'customerctrl'
     }).
-    when('/customer/:id',{
-         templateUrl:'customerdetail.html',
+    when('/edit/:id',{
+         templateUrl:'customerdetail/customerdetail.html',
          controller: 'customerctrl'
     }).
+    when('/delete/:id',{
+         templateUrl:'list/customerlist.html',
+         controller: 'listctrl'
+    }).
+    when('/tran/:id',{
+        templateUrl: 'list/transactionlist.html',
+        controller:'customerctrl'
+
+    }).
     otherwise({
-        redirectTo: '/'
+        redirectTo: '/list'
     });
 });

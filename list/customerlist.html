@@ -1,0 +1,25 @@
+<div class="container" ng-controller="listctrl">
+<h3>Customer Lists</h3>
+<div class="table-responsive">
+  <table class="table table-bordered table-hover">
+    <thead>
+      <tr>
+
+          <th>Name</th>
+          <th>Sex</th>
+          <th>Email</th>
+          <th>Action</th>
+      </tr>
+    </thead>
+      <tr ng-repeat="newcustomer in customers" align="center">
+
+
+    <td><a href= "#/edit/{{newcustomer.name}}"> {{newcustomer.name}}</a> </td>
+    <td> {{newcustomer.sex}}</td>
+    <td><a href = "#/tran/{{newcustomer.email}}" >{{newcustomer.email }}</a></td>
+    <td> <a href = "#/remove/" ng-click = "delete()">Delete</a></td>
+    </tr>
+  </table>
+</div>
+<a href = "#/add/" class = "btn btn-primary btn-md">Add Customer</a>
+</div>
