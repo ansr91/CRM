@@ -4,7 +4,7 @@
       <div class="form-group row">
       <label for="name" class="col-sm-2 form-control-label">NAME</label>
       <div class="col-sm-4">
-        <input type="text" class="form-control" id="inputEmail3" ng-model="newcustomer.name" placeholder="Name">
+        <input type="text" class="form-control" id="inputEmail3" ng-model="newcustomer.name" placeholder="Name" required>
       </div>
     </div>
     <div class="form-group row">
@@ -12,7 +12,7 @@
       <div class="col-sm-2">
         <div class="radio">
           <label class="active">
-            <input type="radio" name="gridRadios" id="gridRadios1" ng-model="newcustomer.sex" value="MALE" checked="checked">Male
+            <input type="radio" name="gridRadios" id="gridRadios1" ng-model="newcustomer.sex" value="MALE" checked="checked" required>Male
           </label>
           <label>
             <input type="radio" name="gridRadios" id="gridRadios2" ng-model="newcustomer.sex" value="FEMALE">Female
@@ -23,7 +23,7 @@
     <div class="form-group row">
       <label for="email" class="col-sm-2 form-control-label">E-MAIL</label>
       <div class="col-sm-4">
-        <input type="email" class="form-control" id="inputEmail3" ng-model="newcustomer.email" placeholder="email"><br>
+        <input type="email" class="form-control" id="inputEmail3" ng-model="newcustomer.email" placeholder="email" required><br>
       </div>
     </div>
         <input type= "button" class="btn btn-primary btn-md  " ng-click="addcustomer()" value=ADD>

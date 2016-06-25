@@ -14,11 +14,11 @@ myApp.config(function($routeProvider) {
          templateUrl:'customerdetail/customerdetail.html',
          controller: 'customerctrl'
     }).
-    when('/delete/:id',{
+    when('/delete/:uid',{
          templateUrl:'list/customerlist.html',
-         controller: 'listctrl'
+         controller: 'customerctrl'
     }).
-    when('/tran/:id',{
+    when('/tran/:eid',{
         templateUrl: 'list/transactionlist.html',
         controller:'customerctrl'
 

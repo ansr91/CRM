@@ -43,6 +43,7 @@ myApp.controller('customerctrl', function($scope, $routeParams, display) {
         }
       });
     }
+
   }
 
 });
