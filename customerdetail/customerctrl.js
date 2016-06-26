@@ -45,5 +45,8 @@ myApp.controller('customerctrl', function($scope, $routeParams, display) {
     }
 
   }
-
+$scope.remove = function(index){
+  $scope.customers = dispaly.getData();
+  $scope.customers.splice(index,1);
+};
 });
