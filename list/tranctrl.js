@@ -1,5 +1,5 @@
 myApp.controller('tranctrl', function($scope, display){
-$scope.services = [];
+
 $scope.addtran = function(){
   $scope.services.push($scope.service);
   window.localStorage.setItem('order', JSON.stringify($scope.services));

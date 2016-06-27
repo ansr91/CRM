@@ -16,11 +16,7 @@ myApp.controller('customerctrl', function($scope, $routeParams, display) {
     $scope.newcustomer = {
       name: "",
       sex: "",
-      email: "",
-      product:[{
-        name: "",
-        price:""
-      }]
+      email: ""
     };
   }
 
@@ -37,45 +33,6 @@ myApp.controller('customerctrl', function($scope, $routeParams, display) {
         }
       });
     }
-
-    var eid = $routeParams.eid || "";
-    if (eid !== "") {
-      $scope.customers.forEach(function(row, k) {
-        if (row.email == eid) {
-          $scope.newcustomer = row;
-          $scope.editIndex = k;
-        }
-      });
-    }
-
   }
-<<<<<<< HEAD
-  $scope.services = [];
-  $scope.addtran = function(){
-    $scope.services.push($scope.service);
-    window.localStorage.setItem('order', JSON.stringify($scope.services));
-      $scope.service={
-      title: "",
-      price: ""
-    };
-};
 
-
-   $scope.total=function(){
-    var t = 0;
-    angular.forEach($scope.services, function(s){
-      if(s.selected)
-      t+=s.price;
-    });
-    return t;
-  };
-
-  $scope.services = display.getProduct();
-
-=======
-$scope.remove = function(index){
-  $scope.customers = dispaly.getData();
-  $scope.customers.splice(index,1);
-};
->>>>>>> 61693aeb9368e6af11b9e107fcd8a37c1b3c38ef
 });

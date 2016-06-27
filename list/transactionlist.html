@@ -14,9 +14,8 @@
           {{service.email}}
         </div>
       </div>
-      <a href = "#/add/" class = "btn btn-primary btn-md">Add Customer</a>
-<<<<<<< HEAD
-        <a href = "#/list" class = "btn btn-primary btn-md ">Customers List</a>
+
+
       </form>
 <form id="main" >
 			<h1>Products</h1>
@@ -31,7 +30,11 @@
 			</ul>
 
 			<p id="total">total: <span>${{total()}}</span></p>
+      <p id ="total"><a href = "#/print/" class= "btn btn-primary btn-md">print</a>
     </form>
+    <a href = "#/list/" class = "btn btn-primary btn-md ">Customers List</a>
+    <a href = "#/add/" class = "btn btn-primary btn-md">Add Customer</a>
+
 <div class="table-responsive">
   <table class="table table-bordered table-hover">
   <thead>
@@ -50,8 +53,6 @@
             <td><input type="text" ng-model="service.title" style="width: 99%"></td>
             <td><input type="number" ng-model="service.price" style="width: 85px"></td>
             <td><a ng-click="addtran()">[+]</a></td>
+          </tr>
 </div>
-=======
-        <a href = "#/list/" class = "btn btn-primary btn-md ">Customers List</a>
->>>>>>> 61693aeb9368e6af11b9e107fcd8a37c1b3c38ef
-</div>
+  </div>
