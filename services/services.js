@@ -8,4 +8,12 @@ myApp.service('display', function() {
     }
     return customers;
   };
+  this.getProduct = function(){
+    var services = window.localStorage.getItem('order');
+    if(services !== null){
+      services = JSON.parse(services);
+    } else {
+      services = [];
+    }
+  };
 });

@@ -20,7 +20,7 @@ myApp.config(function($routeProvider) {
     }).
     when('/tran/:eid',{
         templateUrl: 'list/transactionlist.html',
-        controller:'customerctrl'
+        controller:'tranctrl'
 
     }).
     otherwise({
