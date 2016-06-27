@@ -49,6 +49,7 @@ myApp.controller('customerctrl', function($scope, $routeParams, display) {
     }
 
   }
+<<<<<<< HEAD
   $scope.services = [];
   $scope.addtran = function(){
     $scope.services.push($scope.service);
@@ -71,4 +72,10 @@ myApp.controller('customerctrl', function($scope, $routeParams, display) {
 
   $scope.services = display.getProduct();
 
+=======
+$scope.remove = function(index){
+  $scope.customers = dispaly.getData();
+  $scope.customers.splice(index,1);
+};
+>>>>>>> 61693aeb9368e6af11b9e107fcd8a37c1b3c38ef
 });

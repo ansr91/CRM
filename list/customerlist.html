@@ -17,7 +17,7 @@
     <td><a href= "#/edit/{{newcustomer.name}}"> {{newcustomer.name}}</a> </td>
     <td> {{newcustomer.sex}}</td>
     <td><a href = "#/tran/{{newcustomer.email}}" >{{newcustomer.email }}</a></td>
-    <td> <a href = "#/delete/" ng-click = "delete()">Delete</a></td>
+    <td> <button ng-click="remove($index)" class="btn btn-danger">Delete</button></td>
     </tr>
   </table>
 </div>

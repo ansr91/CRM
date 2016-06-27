@@ -14,10 +14,7 @@ myApp.config(function($routeProvider) {
          templateUrl:'customerdetail/customerdetail.html',
          controller: 'customerctrl'
     }).
-    when('/delete/:uid',{
-         templateUrl:'list/customerlist.html',
-         controller: 'customerctrl'
-    }).
+    
     when('/tran/:eid',{
         templateUrl: 'list/transactionlist.html',
         controller:'tranctrl'
