@@ -15,5 +15,6 @@ myApp.service('display', function() {
     } else {
       services = [];
     }
+    return services;
   };
 });
